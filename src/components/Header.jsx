@@ -9,9 +9,9 @@ const Header = () => {
         <h4 className='text-lg'>8 Products available</h4>
         <div><FaCartPlus size={30} /></div>
       </div>
-      <form className='flex p-4 gap-4 w-[60%] mx-auto' action="">
-         <input className='p-2 w-full bg-gray-200 rounded-lg' placeholder='Search Products' type="text" />
-         <button className='p-2 w-[20%] bg-black text-white font-semibold rounded-lg'>Search</button>
+      <form className='flex p-4 gap-4 w-[60%] min-w-fit mx-auto' action="">
+         <input className='p-2 w-full min-w-fit bg-gray-200 rounded-lg' placeholder='Search Products' type="text" />
+         <button className='p-2 w-[20%] min-w-fit bg-black text-white font-semibold rounded-lg'>Search</button>
       </form>
     </div>
   )

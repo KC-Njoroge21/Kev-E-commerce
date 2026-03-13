@@ -28,7 +28,7 @@ const Products = () => {
 
   const allItems = products.map((item) => {
     return (
-      <SingleProduct item={item} />
+      <SingleProduct key={item.id} item={item} />
     )
   })
 
@@ -47,7 +47,7 @@ const Products = () => {
   return (
     <section>
       <Header />
-      <div>
+      <div className='flex flex-wrap gap-12 justify-center'>
         {allItems}
       </div>
     </section>
