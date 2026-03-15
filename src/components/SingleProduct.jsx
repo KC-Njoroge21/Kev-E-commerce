@@ -1,18 +1,22 @@
 import React from 'react'
 import { IoCartOutline } from "react-icons/io5";
 import { useDispatch } from 'react-redux';
-import cartSlice from '../store/cartSlice';
+import { cartActions } from '../store/cartSlice';
 
 const SingleProduct = (props) => {
 
   const dispatch = useDispatch()
 
+ 
+
   const addToCart = () => {
-    dispatch(cartSlice.actions.addToCart({
+    dispatch(cartActions.addToCart({
       id: props.item.id,
-      name: props.item.name,
-      price: props.item.price
+      name: props.item.title,
+      price: props.item.price,
+      image: props.item.image
     }))
+   
   }
 
   return (

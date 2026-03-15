@@ -13,7 +13,7 @@ const Cart = () => {
   })
 
   return (
-    <div>
+    <div className='flex flex-col gap-4 p-6'>
       {allCartItems}
     </div>
   )

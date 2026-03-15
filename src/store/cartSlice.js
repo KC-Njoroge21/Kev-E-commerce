@@ -19,17 +19,19 @@ const cartSlice = createSlice({
 
       if (existingItem) {
         existingItem.quantity++
-        existingItem.totalPrice += existingItem.price
+        existingItem.price += existingItem.price
       } else {
         state.cartList.push({
           id: newItem.id,
           price: newItem.price,
           name: newItem.name,
-          img: newItem.image
+          image: newItem.image,
+          quantity: 1
         })
       }
 
       state.totalQuantity++
+      
     }
   }
 })

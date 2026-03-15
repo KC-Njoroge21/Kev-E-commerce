@@ -9,6 +9,10 @@ const App = () => {
 
   const isLoggedIn = useSelector(state => state.auth.isLoggedIn)
 
+   const cartItems = useSelector(state => state.cart.cartItems)
+
+    console.log(cartItems)
+
   return (
     <div>
       <Routes>
