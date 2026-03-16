@@ -19,6 +19,10 @@ const Cart = () => {
     return <CartItem item={item} key={index} />;
   });
 
+  const confirmOrder = () => {
+    alert("CONFIRM THAT YOU WANT TO PLACE THIS ORDER!")
+  }
+
   return (
     <section>
       <header className="shadow-sm flex justify-evenly items-center p-4">
@@ -67,7 +71,7 @@ const Cart = () => {
             <h3 className="font-semibold text-xl">Total</h3>
             <h4 className="font-bold text-2xl">${totalPrice.toFixed(2)}</h4>
           </div>
-          <button className="p-3 bg-black active:opacity-75 text-white font-semibold w-full rounded-lg">Proceed to Checkout</button>
+          <button onClick={confirmOrder} className="p-3 bg-black active:opacity-75 text-white font-semibold w-full rounded-lg">Proceed to Checkout</button>
           <hr className="text-gray-300" />
           <h5 className="text-sm text-gray-500">Secure checkout . Free returns within 30 days</h5>
        </div>

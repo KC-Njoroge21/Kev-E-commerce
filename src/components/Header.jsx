@@ -7,6 +7,10 @@ const Header = () => {
   
   const totalQuantity = useSelector((state) => state.cart.totalQuantity)
 
+  
+
+
+
 
   return (
     <div className='shadow-md'>
@@ -18,7 +22,7 @@ const Header = () => {
         </Link>
       </div>
       <form className='flex p-4 gap-4 w-[60%] min-w-fit mx-auto' action="">
-         <input className='p-2 w-full min-w-fit bg-gray-200 rounded-lg' placeholder='Search Products' type="text" />
+         <input className='p-2 w-full min-w-fit bg-gray-200 rounded-lg' placeholder='Search Products' type="text"  />
          <button className='p-2 w-[20%] min-w-fit bg-black text-white font-semibold rounded-lg'>Search</button>
       </form>
     </div>
