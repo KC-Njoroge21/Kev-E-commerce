@@ -28,13 +28,15 @@ const Cart = () => {
       <div className="flex lg:flex-row  flex-col gap-5 p-6">
        <div className="shadow border-2 w-full border-gray-200 rounded-xl">
          <h2 className="text-xl font-semibold">Cart Items</h2>
-      <div className="flex flex-col gap-4 p-6">{allCartItems}</div>
+      <div>
+        {allCartItems.length <= 0 ? <div className="text-2xl text-gray-500 text-center mt-5">No Items in Cart!</div> : <div className="flex flex-col gap-4 p-6">{allCartItems}</div>}
+      </div>
        </div>
 
        <div className="flex lg:w-[40%] w-full flex-col gap-5 p-5 shadow-lg border-2 h-fit border-gray-200 rounded-xl">
           <h3 className="text-xl font-semibold">Order Summary</h3>
 
-          <div>
+          <div className="flex flex-col gap-2">
             <h4 className="text-gray-500 font-semibold">Promo Code</h4>
             <div className="flex gap-4">
               <input className="p-2 border border-gray-300 rounded-lg w-full" type="text" placeholder="Enter code" />
