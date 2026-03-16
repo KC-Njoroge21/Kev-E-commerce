@@ -56,7 +56,7 @@ const SignIn = () => {
           <button className='w-full border rounded-lg flex items-center font-semibold justify-center gap-4 p-2 border-gray-200'><GrApple size={20} /> Apple</button>
         </div>
 
-        <h2>
+        <h2 className='text-center'>
           Don't have an acoount? <span className='font-semibold hover:underline'>Sign up for free</span>
         </h2>
         
