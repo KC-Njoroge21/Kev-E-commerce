@@ -7,6 +7,14 @@ import { Link } from "react-router";
 const Cart = () => {
   const cartList = useSelector((state) => state.cart.cartList);
 
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity)
+
+  const totalPrice = cartList.reduce((acc, item) => {
+    return (
+      acc + item.totalPrice
+    )
+  }, 0)
+
   const allCartItems = cartList.map((item, index) => {
     return <CartItem item={item} key={index} />;
   });
@@ -21,7 +29,7 @@ const Cart = () => {
         <h2 className="text-2xl font-semibold">Shopping Cart</h2>
         </div>
         <div>
-          <h4 className="text-lg text-gray-500">4 Items</h4>
+          <h4 className="text-lg text-gray-500">{totalQuantity} Items</h4>
         </div>
       </header>
 
@@ -47,7 +55,7 @@ const Cart = () => {
           <div className="flex flex-col gap-3">
             <div className="flex justify-between">
               <h4 className="text-gray-700">Subtotal</h4>
-              <h4 className="text-gray-700">$759.95</h4>
+              <h4 className="text-gray-700">${totalPrice.toFixed(2)}</h4>
             </div>
             <div className="flex justify-between">
               <h4 className="text-gray-700">Shipping</h4>
@@ -57,7 +65,7 @@ const Cart = () => {
           <hr className="text-gray-300" />
           <div className="flex justify-between">
             <h3 className="font-semibold text-xl">Total</h3>
-            <h4 className="font-bold text-2xl">$759.95</h4>
+            <h4 className="font-bold text-2xl">${totalPrice.toFixed(2)}</h4>
           </div>
           <button className="p-3 bg-black text-white font-semibold w-full rounded-lg">Proceed to Checkout</button>
           <hr className="text-gray-300" />

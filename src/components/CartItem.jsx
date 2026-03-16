@@ -22,6 +22,8 @@ const CartItem = (props) => {
     dispatch(cartActions.removeFromCart(props.item.id))
   }
 
+  
+
   return (
     <div className="flex p-4 gap-4 border-b border-gray-300">
       
