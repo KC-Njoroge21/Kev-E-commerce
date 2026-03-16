@@ -38,7 +38,7 @@ const Products = () => {
 
   if (isLoading) {
     return (
-      <div>
+      <div className='text-2xl font-semibold text-center mt-6'>
         Loading...
       </div>
     )
