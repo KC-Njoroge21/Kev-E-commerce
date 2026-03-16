@@ -22,6 +22,10 @@ const CartItem = (props) => {
     dispatch(cartActions.removeFromCart(props.item.id))
   }
 
+  const deleteFromCart = () => {
+    dispatch(cartActions.deleteFromCart(props.item.id))
+  }
+
   
 
   return (
@@ -53,7 +57,7 @@ const CartItem = (props) => {
 
           <div className="w-full flex items-center gap-4 justify-end">
             <h2 className="text-lg font-semibold ">${props.item.totalPrice.toFixed(2)}</h2>
-            <button>
+            <button onClick={deleteFromCart}>
               <GoTrash size={25} />
             </button>
           </div>
