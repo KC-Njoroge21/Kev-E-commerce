@@ -26,7 +26,7 @@ const Cart = () => {
           <Link to={"/"}>
           <button><IoArrowBack size={30} /></button>
           </Link>
-        <h2 className="text-2xl font-semibold">Shopping Cart</h2>
+        <h2 className="lg:text-2xl text-lg font-semibold">Shopping Cart</h2>
         </div>
         <div>
           <h4 className="text-lg text-gray-500">{totalQuantity} Items</h4>
@@ -67,7 +67,7 @@ const Cart = () => {
             <h3 className="font-semibold text-xl">Total</h3>
             <h4 className="font-bold text-2xl">${totalPrice.toFixed(2)}</h4>
           </div>
-          <button className="p-3 bg-black text-white font-semibold w-full rounded-lg">Proceed to Checkout</button>
+          <button className="p-3 bg-black active:opacity-75 text-white font-semibold w-full rounded-lg">Proceed to Checkout</button>
           <hr className="text-gray-300" />
           <h5 className="text-sm text-gray-500">Secure checkout . Free returns within 30 days</h5>
        </div>

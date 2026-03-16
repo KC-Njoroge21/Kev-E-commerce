@@ -30,7 +30,7 @@ const SingleProduct = (props) => {
       </div>
       <div className='flex justify-between items-center'>
         <h2 className='text-xl font-bold'>${props.item.price}</h2>
-        <button onClick={addToCart} className='flex items-center p-2 bg-black text-white font-semibold rounded-lg'><IoCartOutline size={30} /> Add to Cart</button>
+        <button onClick={addToCart} className='flex items-center active:opacity-75 p-2 bg-black text-white font-semibold rounded-lg cursor-pointer'><IoCartOutline size={30} /> Add to Cart</button>
       </div>
     </div>
   )
