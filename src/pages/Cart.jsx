@@ -1,6 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import CartItem from "../components/CartItem";
+import { IoArrowBack } from "react-icons/io5";
+import { Link } from "react-router";
 
 const Cart = () => {
   const cartList = useSelector((state) => state.cart.cartList);
@@ -11,23 +13,25 @@ const Cart = () => {
 
   return (
     <section>
-      <header>
-        <div>
-          <button></button>
-        <h2>Shopping Cart</h2>
+      <header className="shadow-sm flex justify-evenly items-center p-4">
+        <div className="flex gap-5 items-center">
+          <Link to={"/"}>
+          <button><IoArrowBack size={30} /></button>
+          </Link>
+        <h2 className="text-2xl font-semibold">Shopping Cart</h2>
         </div>
         <div>
-          <h4>4 Items</h4>
+          <h4 className="text-lg text-gray-500">4 Items</h4>
         </div>
       </header>
 
-      <div className="flex lg:flex-row flex-col gap-5 p-6">
-       <div className="shadow border-2 border-gray-200 rounded-xl">
+      <div className="flex lg:flex-row  flex-col gap-5 p-6">
+       <div className="shadow border-2 w-full border-gray-200 rounded-xl">
          <h2 className="text-xl font-semibold">Cart Items</h2>
       <div className="flex flex-col gap-4 p-6">{allCartItems}</div>
        </div>
 
-       <div className="flex flex-col gap-5 p-5 shadow-lg border-2 h-fit border-gray-200 rounded-xl">
+       <div className="flex lg:w-[40%] w-full flex-col gap-5 p-5 shadow-lg border-2 h-fit border-gray-200 rounded-xl">
           <h3 className="text-xl font-semibold">Order Summary</h3>
 
           <div>
